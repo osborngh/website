@@ -1,0 +1,8 @@
+[submodule "osborngh.github.io/osborngh.github.io"]
+	path = osborngh.github.io/osborngh.github.io
+	url = https://github.com/osborngh/osborngh.github.io.git
+	branch = main
+[submodule "osborngh.github.io/public"]
+	path = osborngh.github.io/public
+	url = https://github.com/osborngh/osborngh.github.io.git
+	branch = main
