@@ -1,0 +1,59 @@
+/* Strong selectors to target the About section on homepage */
+body .page-home.custom-about-home {
+  display: flex !important;
+  align-items: left !important;
+  justify-content: left !important;
+  text-align: left !important;
+  min-height: 70vh !important;
+  padding: 2rem 1rem !important;
+  box-sizing: border-box !important;
+}
+
+/* If needed: adjust margins of paragraph / headings inside */
+body .custom-about-content p {
+  text-align: left; /* or center if you prefer centered text */
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+main {
+    align-items: start;
+    display: grid;
+    grid-area: main;
+    grid-template-areas: "empty content sidebar";
+    grid-template-columns: 1fr minmax(0, 650px) 4fr;
+}
+
+.content {
+    width: 100%;
+    grid-column: 1 / -1;
+    text-align: left;
+    align-content: left;
+}
+
+.content-section{
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: left;
+    padding-inline: 1rem;
+    padding: 1.5rem;
+}
+
+.post {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: left;
+    padding-inline: 1rem;
+    padding: 1.5rem;
+}
+
+.post-content {
+  text-align: left;
+  align-items: left;
+}
+
+.post-meta-inner {
+  display: inline-block;
+  border-bottom: 1px solid #928374;
+  padding-bottom: 0.25rem;
+}

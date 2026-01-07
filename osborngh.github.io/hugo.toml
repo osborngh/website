@@ -1,8 +1,12 @@
 baseURL = 'https://osborngh.github.io/'
-languageCode = 'en-us'
-title = 'Vinci'
+title = "The Codex Ars"
+copyright = "Copyright © 2026 - Vinci"
+enableRobotsTXT = true
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
   # (Optional) To be able to use all Prism plugins, the theme enables unsafe
   # rendering by default
   #_merge = "deep"
@@ -11,17 +15,30 @@ title = 'Vinci'
   # Merge build config of the theme
   _merge = "deep"
 
+[outputs]
+  # The search requires rendering the theme's
+  home = ["html", "searchIndex"]
+
+[params]
+  author = "Vinci"
+  subtitle = "The Dump"
+  description = "A collection of dumb notes, thoughts and writeups"
+
+[params.logo]
+  text = "vinci"
+  url = "/"
+
 # This hopefully will be simpler in the future.
 # See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
   [[module.imports]]
     path = "github.com/schnerring/hugo-theme-gruvbox"
-  #[[module.imports]]
-    #path = "github.com/schnerring/hugo-mod-json-resume"
-    #[[module.imports.mounts]]
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-mod-json-resume"
+    [[module.imports.mounts]]
       # This will add the sample Richard Hendricks CV data
-      #source = "data"
-      #target = "data"
+      source = "data"
+      target = "data"
     [[module.imports.mounts]]
       source = "layouts"
       target = "layouts"
@@ -62,3 +79,21 @@ title = 'Vinci'
     target = "assets/watching/hugo_stats.json"
 
 
+[menu]
+  [[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog"
+  weight = 10
+
+  [[menu.main]]
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects"
+  weight = 30
+
+  [[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about"
+  weight = 50
